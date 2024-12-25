@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>inspiSave - Save Landing Pages' ScreenShot in Notion DB</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="popup__mainBox" id="content">
+                <div class="popup__loginBox" id="loginPage">
+                    <h1 class="popup__login__heading">Login to Notion</h1>
+                    <button class="popup__login__btn" id="login-btn">
+                        Login
+                    </button>
+                </div>
+                <div class="popup__savePageBox" id="savePage">
+                    <h1 class="popup__savePage__heading">
+                        Save Landing Page to Notion
+                    </h1>
+                    <button class="popup__savePage__btn" id="save-page-btn">
+                        <img
+                            src="./img/camera.svg"
+                            alt="Camera icon in black color"
+                            class="popup__savePage__btn-icon"
+                        />
+                        <span class="popup__savePage__btn-text"
+                            >Capture this screen</span
+                        >
+                    </button>
+                    <button class="popup__logout__btn" id="logout-btn">
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <div id="loading" class="flex">
+                <img
+                    src="./img/loading.gif"
+                    alt="Hand showing waiting for something"
+                    class="loading-img"
+                />
+                <p>
+                    Please bear with us, it may take some time to build the
+                    screenshot.
+                </p>
+            </div>
+            <div class="message-text" id="final-message"></div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

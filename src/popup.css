@@ -1,0 +1,115 @@
+/*********************/
+/* Root styles */
+/*********************/
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+    color: #050505;
+}
+
+/*********************/
+/* Utility classes */
+/*********************/
+.flex {
+    display: flex;
+}
+
+/*********************/
+/* Main styles */
+/*********************/
+.app {
+    width: 400px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.popup__login__btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px inset,
+        rgba(15, 15, 15, 0.1) 0px 1px 2px;
+    background-color: hsl(197, 71%, 52%);
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.popup__login__btn:hover {
+    background-color: hsl(197, 71%, 45%);
+}
+
+.popup__login__heading,
+.popup__savePage__heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup__savePage__btn {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(180, 100%, 50%);
+    transition: background-color 0.3s;
+}
+
+.popup__savePage__btn:hover {
+    background-color: hsl(180, 100%, 45%);
+}
+
+.popup__savePage__btn-icon {
+    height: 25px;
+}
+
+.popup__savePage__btn-text {
+    font-size: 18px;
+    color: #050505;
+}
+
+.popup__logout__btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #666;
+    cursor: pointer;
+    color: #666;
+    background-color: transparent;
+}
+
+.popup__logout__btn:hover {
+    color: #333;
+    border-color: #333;
+}
+
+.message-text {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.loading-img {
+    height: 50px;
+}
