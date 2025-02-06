@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
             sendResponse({
                 error: {
                     message:
-                        "Sorry, Something unexpected happen with this page, please open issue at ${githubLink}",
+                        "Sorry, Something unexpected happen with this page, try again.",
                 },
             });
         }

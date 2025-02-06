@@ -10,7 +10,7 @@ import {
 import { getDatabaseId, getUserAccessToken } from "./utils";
 import axios from "axios";
 
-const ROOT_URL = "http://localhost:3000/api/v1";
+const ROOT_URL = "https://inspi-save-backend.vercel.app/api/v1";
 const clientId = "14dd872b-594c-80ab-b263-00373bb8656a";
 const redirectUrl = "https://inspisave.netlify.app/";
 const notionAuthUrl = `https://api.notion.com/v1/oauth/authorize?client_id=${clientId}&response_type=code&owner=user&redirect_uri=${redirectUrl}`;
@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener((message) => {
                         });
                     } catch (error) {
                         console.log(
-                            "Notion authentication failed, please make sure you allowed required permission"
+                            "Notion authentication failed, please make sure you allowed required permission."
                         );
                     }
                 }
@@ -88,14 +88,13 @@ chrome.runtime.onMessage.addListener((message) => {
                             chrome.runtime.sendMessage({
                                 action: showError,
                                 message:
-                                    "Sorry, we can't build the screenshot of this page",
+                                    "Sorry, we can't build the screenshot of this page.",
                             });
                         }
                     } else {
                         chrome.runtime.sendMessage({
                             action: showError,
-                            message:
-                                "Sorry, Something unexpected happen at background, please open issue at ${githubLink}",
+                            message: `Sorry, something unexpected happen, try again.`,
                         });
                     }
                 }
@@ -146,7 +145,8 @@ async function sendPageInfoToNotion(pageInfo) {
     } catch (error) {
         chrome.runtime.sendMessage({
             action: showError,
-            message: "Something went wrong from notion side",
+            message:
+                "Something went wrong, please try agian, if that doesn't work, try removing notion page, and login again",
         });
     }
 }
